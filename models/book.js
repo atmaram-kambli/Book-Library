@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 
-const bookSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const bookSchema = new Schema({
     title: {
         type: String, required: true,
     },
     author: {
-        type: mongoose.Schema.Types.ObjectId, ref: "Author", required: true,
+        type: Schema.Types.ObjectId, ref: "Author", required: true,
     },
     summary: {
         type: String, required: true,
@@ -14,7 +16,7 @@ const bookSchema = new mongoose.Schema({
         type: String, required: true,
     },
     genre: [{
-        type: mongoose.Schema.Types.ObjectId, ref:"Genre",
+        type: Schema.Types.ObjectId, ref:"Genre",
     }],
 });
 

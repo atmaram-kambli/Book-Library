@@ -12,14 +12,14 @@ const authorSchema = new mongoose.Schema({
         maxLength: 100,
     },
     dataOfBirth: Date,
-    dateOfDeat: Date
+    dateOfDeath: Date
 });
 
 
 authorSchema.virtual("fullName").get(function() {
     let name="";
     if(this.firstName && this.lastName) {
-        name = `${this.firstName}, ${this.lastName}`;
+        name = `${this.firstName} ${this.lastName}`;
     }
     return name;
 });
