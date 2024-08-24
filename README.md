@@ -7,3 +7,4 @@
 - express-application-generator
 - node.js, express.js, mongoose
 - view-engine: jade(pug)
+- MVC: Model View Controller architechural style
