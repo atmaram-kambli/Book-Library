@@ -47,8 +47,8 @@ console.log(
   }
   
   async function authorCreate(index, first_name, family_name, d_birth, d_death) {
-    const authordetail = { firstName: first_name, familyName: family_name };
-    if (d_birth != false) authordetail.dateOfBirth = d_birth;
+    const authordetail = { firstName: first_name, lastName: family_name };
+    if (d_birth != false) authordetail.dataOfBirth = d_birth;
     if (d_death != false) authordetail.dateOfDeath = d_death;
   
     const author = new Author(authordetail);
